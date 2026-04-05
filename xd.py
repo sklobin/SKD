@@ -334,5 +334,3 @@ def confirm_id(mail,uid,otp,data,ses,random_password):
             oks.append(uid)
     except Exception as e:pass
 #▬▭▬▭▬▭▬▭[EXIT]▬▭▬▭▬▭▬▭#
-if __name__ == "__main__":
-    approval()
