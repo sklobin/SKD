@@ -229,63 +229,7 @@ logo = ("""\033[1;92m    _          _
 \033[1;31;1m█ \033[1;92m [•] \033[1;31;1mGroup Fb  :  \033[1;92m Termux Oggy World   \033[1;31;1m █
 \033[1;31;1m█ \033[1;92m [•] \033[1;31;1mVersion   :  \033[1;92m 0.2                  \033[1;31;1m█
 \033[1;92m╚═════════════════════════════════════════╝""")
-#▬▭▬▭▬▭▬▭[APPROVAL]▬▭▬▭▬▭▬▭#
-import os
-import random
-import subprocess
-import requests
-key_file="/sdcard/.oggy_key"
-if os.path.exists(key_file):
-    raw_key=open(key_file).read().strip()
-else:
-    uid=random.randint(10,99)
-    hex_part=''.join(random.choices("ABCDEF0123456789",k=12))
-    raw_key=f"OGGY-LOCK-UID{uid}-KEY2026-{hex_part}"
-    open(key_file,"w").write(raw_key)
-key_url="https://raw.githubusercontent.com/SKBER-CYBER/FFAB/main/Apprp.txt"
-def approval():
-    try:
-        data=requests.get(key_url).text
-        if raw_key in data:
-            main_menu()
-        else:
-            buy_menu()
-    except:
-        print("No Internet")
-        exit()
-def buy_menu():
-    os.system("clear")
-    print(logo)
-    print("\033[1;92m═════════════════════════════════════════")
-    print("\033[1;92m👉YOUR KEY 👉",raw_key)
-    print("\033[1;92m═════════════════════════════════════════")
-    print("\033[1;92m👉WE SUPPORT PALESTINENS SAFE PALESTINENS")
-    print("\033[1;92m═════════════════════════════════════════")
-    print("\033[1;92m[👉] BUY PREMIUM LICENCE AND USE TOOL")
-    print("\033[1;92m[👉] WHATSAPP NUMBER :- +8801917466867")
-    print("\033[1;92m[👉] PROHACK TOOLS ALL FILE CLONING")
-    print("\033[1;92m═════════════════════════════════════════")
-    print("\033[1;92mMenu:")
-    print("\033[1;92m     + File Cloning")
-    print("\033[1;92m     + File Cloning")
-    print("\033[1;92m     + File Cloning")
-    print("\033[1;92m     + File Cloning")
-    print("\033[1;92m     + Auto Cloning")
-    print("\033[1;92m     + Random Cloning")
-    print("\033[1;92m     1.If You Want To buy Key Inter & Open WhatsApp")
-    print("\033[1;92m     + If You Already Buy.Key You Can Use Any Number ")
-    print("\033[1;92m═════════════════════════════════════════")
-    choice=input("Enter The Number To Run Targer( 1-7 or 'q' to quit) : ")
-    if choice=="1":
-        linex();name=input("\033[1;92m[👉] Enter Your Name 👉 ")
-        msg=f"Hi Mr Oggy\nName : {name}\nKey : {raw_key}"
-        url="https://api.whatsapp.com/send?phone=8801917466867&text="+msg
-        subprocess.run(["am","start",url])
-    elif choice=="2":
-        exit()
-    else:
-        print("\033[1;91mWrong Option")
-        exit()
+
 #▬▭▬▭▬▭▬▭[MAIN MENU]▬▭▬▭▬▭▬▭#
 def main_menu():
     print(f"\033[1;92m Welcome to James Prohack Tool ...");time.sleep(6);clear()
